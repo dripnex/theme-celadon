@@ -1,0 +1,62 @@
+/**
+ * Celadon — satellite Dripnex theme.
+ * Token layer only. Same contract as a community theme repo.
+ * Must be CommonJS.
+ *
+ * Celadon porcelain paper, jade glaze accent, quiet kiln.
+ * Not matcha (green tea). Not pine (forest dark).
+ * Not phosphor (amber CRT). Not quartz (cold paper).
+ * Not wisteria (lilac blossom).
+ */
+
+const TOKENS = {
+  '--bg-base': '#e7efe8',
+  '--bg-surface': '#dce8de',
+  '--bg-elevated': '#f3f7f3',
+  '--bg-inset': '#cfdcd2',
+  '--bg-hover': 'rgba(36, 50, 42, 0.05)',
+  '--bg-active': 'rgba(36, 50, 42, 0.09)',
+  '--text-primary': '#24322a',
+  '--text-secondary': 'rgba(36, 50, 42, 0.74)',
+  '--text-muted': 'rgba(36, 50, 42, 0.52)',
+  '--text-faint': 'rgba(36, 50, 42, 0.34)',
+  '--border': 'rgba(36, 50, 42, 0.12)',
+  '--border-subtle': 'rgba(36, 50, 42, 0.07)',
+  '--border-strong': 'rgba(36, 50, 42, 0.18)',
+  '--accent': '#4e8a68',
+  '--accent-hover': '#3f7356',
+  '--accent-muted': 'rgba(78, 138, 104, 0.2)',
+  '--accent-subtle': 'rgba(78, 138, 104, 0.1)',
+  '--glass-bg': 'rgba(231, 239, 232, 0.92)',
+  '--glass-border': 'rgba(36, 50, 42, 0.1)',
+  '--glass-bg-menu': 'rgba(243, 247, 243, 0.96)',
+  '--glass-border-menu': 'rgba(36, 50, 42, 0.1)',
+  '--status-active': '#4e8a68',
+  '--status-on-hold': '#c4a04a',
+  '--status-completed': '#4e8a68',
+  '--status-dropped': '#c45a5a',
+};
+
+module.exports = {
+  id: 'theme-celadon',
+  name: 'Celadon',
+  version: '0.1.0',
+  description: 'Celadon porcelain. Jade glaze, quiet kiln.',
+
+  activate(context) {
+    const remove = context.registerTheme({
+      id: 'dripnex-celadon',
+      name: 'Celadon',
+      description: 'Celadon porcelain. Jade glaze, quiet kiln.',
+      author: 'Dripnex',
+      colorScheme: 'light',
+      tokens: TOKENS,
+    });
+
+    return {
+      dispose() {
+        remove();
+      },
+    };
+  },
+};

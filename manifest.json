@@ -1,0 +1,7 @@
+{
+  "id": "theme-celadon",
+  "name": "Celadon",
+  "version": "0.1.0",
+  "description": "Celadon porcelain. Jade glaze, quiet kiln.",
+  "main": "dist/index.js"
+}
